@@ -90,3 +90,67 @@ img {
 .centrar-texto {
     text-align: center;
 }
+
+
+/*header*/
+
+.header {
+    background-image: url(../img/banner.jpg);
+    height: 60rem;
+    /*para ocupar todo el espacio disponible*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*Se centra tanto verticalmente como horizontalmente*/
+    background-position: center center;
+}
+
+.header__texto {
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+
+@media (min-width:768px) {
+    .header__texto {
+        margin-top: 15rem;
+    }
+}
+
+@media (min-width:768px) {
+    .barra {
+        display: flex;
+        /*alinear horizontalmente*/
+        justify-content: space-between;
+        /*alinear horizontalmente*/
+        align-items: center;
+    }
+}
+
+.logo {
+    color: var(--blanco);
+}
+
+.logo__nombre {
+    /*dependiendo a googlefonts*/
+    font-weight: 400;
+}
+
+.logo__bold {
+    /*dependiendo a googlefonts*/
+    font-weight: 700;
+}
+
+@media (min-width:768px) {
+    .navegacion {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.navegacion__enlace {
+    /*elementos uno debajo de otro*/
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
