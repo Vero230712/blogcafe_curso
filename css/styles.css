@@ -93,10 +93,17 @@ img {
 }
 
 
-/*header*/
+/*header para las imagenes se ocupa la librería modernizr para imgs webp */
+
+.webp .header {
+    background-image: url(../img/banner.webp);
+}
+
+.no-wbp .header {
+    background-image: url(../img/banner.jpg);
+}
 
 .header {
-    background-image: url(../img/banner.jpg);
     height: 60rem;
     /*para ocupar todo el espacio disponible*/
     background-size: cover;

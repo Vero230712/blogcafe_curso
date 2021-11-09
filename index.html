@@ -6,11 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog de Café</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Prefetch: sirve para cargar la siguiente página -->
+    <link rel="prefectch" href="nosotros.html" a="document">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Preload: sirve para cargar de inmediato lo más importante del blog -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" href="css/styles.css" as="style">
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body>
@@ -39,7 +47,11 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
+                    <picture>
+                        <!-- las imágenes son menos pesadas en formato webp, si el navegador lo soporta, carga la imagen webp y si no el .jpg, gulp para convertir nuestras imagenes a webp -->
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
+                    </picture>
                 </div>
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Tipos de Grano de Café</h4>
@@ -119,6 +131,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/modernizr.js"></script>
 </body>
 
 </html>
